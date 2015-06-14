@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+ <style name="mm_button">
+    <item name="android:textColor">@color/button_text</item>   
+                <item name="android:textStyle">bold</item>
+                        <item name="android:textSize">18dp</item>
+                        <item name="android:gravity">center</item>
+                        </style>                
+                            
+              
+                                  <style name="subtitle_text">
+    <item name="android:textColor">#ffffffff</item>
+                <item name="android:textStyle">bold</item>
+                        <item name="android:textSize">16dp</item>
+              <item name="android:padding">3dp</item>                
+                            
+ </style>
+ 
+                            <style name="label_text">
+    <item name="android:textColor">#ffffffff</item>
+                <item name="android:textStyle">normal</item>
+                        <item name="android:textSize">16dp</item>
+              <item name="android:padding">3dp</item>                
+                            
+ </style>
+                          
+ 
+</resources>

@@ -1,0 +1,10 @@
+# view res/layout/home.xml #generated:25
+# view sw600dp\res/layout-sw600dp/home.xml #generated:25
+-keep class com.github.mikephil.charting.charts.BarChart { <init>(...); }
+
+# view AndroidManifest.xml #generated:11
+-keep class mmmobile.android.Home { <init>(...); }
+
+# view AndroidManifest.xml #generated:8
+-keep class mmmobile.android.MmApplication { <init>(...); }
+

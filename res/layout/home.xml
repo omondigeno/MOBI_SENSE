@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:background="@drawable/activity_background">
+        <include layout="@layout/mm_action_bar" />
+         <LinearLayout android:orientation="vertical" android:id="@+id/linear_root_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_gravity="center">
+   	 <LinearLayout 
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:orientation="horizontal"
+		    android:layout_gravity="center"             
+                   		android:layout_marginTop="2dp"
+ >
+  <TextView android:gravity="left|center" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Audio Analysis" style="@style/subtitle_text"
+      android:layout_weight="1.0" />
+        <Button android:textStyle="normal" android:layout_gravity="center" android:id="@+id/start_stop_analysis" android:background="@drawable/mmmobile_button" android:layout_width="150.0dip" android:layout_height="36.0dip" android:text="Start" style="@style/mm_button" 
+              android:layout_weight="0.0" />
+           </LinearLayout>	        		     
+        
+    <include layout="@layout/list_divider" />
+                                                          
+                  <LinearLayout android:orientation="vertical" android:id="@+id/activate_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/content_bg_white"
+                      android:layout_marginBottom="3dp">
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />                         
+                    </LinearLayout>
+
+            </LinearLayout>
+    </LinearLayout>
