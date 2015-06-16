@@ -29,18 +29,15 @@ import com.github.mikephil.charting.data.BarEntry;
 public class Home extends MmActivity implements View.OnClickListener {
 
 	static final int SAMPLE_DELAY = 200;
+	static final float Y_AXIS_MAX_VALUE = 100f;
 	int sampleRate = 8000;
 
-	int channelConfiguration = AudioFormat.CHANNEL_CONFIGURATION_MONO;
+	int channelConfiguration = AudioFormat.CHANNEL_IN_MONO;
 	int audioEncoding = AudioFormat.ENCODING_PCM_16BIT;
 	private RealDoubleFFT transformer;
 	int blockSize = 256;
 
 	boolean started = false;
-	ImageView imageView;
-	Bitmap bitmap;
-	Canvas canvas;
-	Paint paint;
 	AnalyseAudioTask analyseAudioTask;
 	protected BarChart mChart;
 	float xAxisIntervals = (sampleRate / 2) / blockSize;
@@ -94,9 +91,9 @@ public class Home extends MmActivity implements View.OnClickListener {
 
 	private void createDashboard() {
 
-		Button requestCode = (Button) Home.this
+		Button startStopAnalysis = (Button) Home.this
 				.findViewById(R.id.start_stop_analysis);
-		requestCode.setOnClickListener(this);
+		startStopAnalysis.setOnClickListener(this);
 
 		transformer = new RealDoubleFFT(blockSize);
 
@@ -122,10 +119,12 @@ public class Home extends MmActivity implements View.OnClickListener {
 		YAxis leftAxis = mChart.getAxisLeft();
 		leftAxis.setPosition(YAxisLabelPosition.OUTSIDE_CHART);
 		leftAxis.setSpaceTop(15f);
-
+		leftAxis.setAxisMaxValue(Y_AXIS_MAX_VALUE);
+		
 		YAxis rightAxis = mChart.getAxisRight();
 		rightAxis.setDrawGridLines(false);
 		rightAxis.setSpaceTop(15f);
+		rightAxis.setAxisMaxValue(Y_AXIS_MAX_VALUE);
 
 	}
 
